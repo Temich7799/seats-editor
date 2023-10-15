@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seats Editor - Demo</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="./editor/js/editor.js"></script>
+    <link rel="stylesheet" href="./editor/css/editor.css">
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+
+    <header>
+        <button id="open">Open editor</button>
+    </header>
+
+    <main>
+        <div id="contentArea"></div>
+    </main>
+
+    <script>
+        $(document).ready(function () {
+
+            const openButton = $('#open');
+            const contentArea = $('#contentArea');
+
+            const editor = $().editor(openButton, contentArea);
+        });
+    </script>
+</body>
+
+</html>
