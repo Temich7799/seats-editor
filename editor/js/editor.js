@@ -4,6 +4,7 @@
 
         if (openButton && contentArea) {
 
+            // Init modal
             const state = {
                 brushes: new Map(),
                 selectedBrush: undefined,
@@ -17,6 +18,8 @@
                 modal.showModal();
             });
 
+            // Helpers
+            
             const renderButton = (id = '', content = '', callback) => {
 
                 const button = document.createElement('button');
@@ -111,6 +114,7 @@
                 return renderCircle(x, y, undefined, 'rgb(255 251 26)')
             }
 
+            // Init editor field
             const svg = renderContentField();
 
             const editorField = renderContentWrapper();
@@ -144,6 +148,8 @@
                     });
             };
             */
+
+            // Actions handlers
 
             const saveAction = () => {
 
@@ -195,6 +201,8 @@
                 $('circle.new', editorField).remove();
                 $('circle.removed', editorField).removeClass('removed');
             }
+
+           // Render modal buttons
 
             modal.append(renderCloseButton('save', 'Save', saveAction));
             modal.append(renderCloseButton('close', 'Close', closeAction));
